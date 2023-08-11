@@ -1,0 +1,8 @@
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    color: var(--white);
+    background-color: var(--primary);
+    padding: 30px;
+    font-size: 1.2rem;
+}

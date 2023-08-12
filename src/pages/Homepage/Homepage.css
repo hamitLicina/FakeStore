@@ -1,6 +1,7 @@
 .homepage-container {
     min-height: 100vh;
     padding: 30px 20px;
+    background-color: var(--gray);
 }
 
 .products-container {

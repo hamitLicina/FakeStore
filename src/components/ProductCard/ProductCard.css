@@ -9,19 +9,17 @@
     border-radius:8px;
     background-color: var(--white);
     color: var(--black);
-    position: relative;
 }
 
 .product-card img{
-    width:100%;
-    margin-bottom:10px;
-    border-radius: 8px;
+    width:90%;
+    height: 300px;
 }
 
 .product-card p{
     margin-top:10px;
     border:none;
-    padding:8px 16px;
+    padding:8px 8px;
     border-radius: 8px;
     background-color: var(--white);
     color:var(--darkgray);

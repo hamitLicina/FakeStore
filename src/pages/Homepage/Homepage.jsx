@@ -6,6 +6,9 @@ import ProductCard from '../../components/ProductCard/ProductCard'
 function Homepage() {
     // Create State for the products
     const [products, setProducts] = useState([])
+    // Create State for the categories
+    const [categories, setCategories] = useState([])
+
 
     // Show all products when the page loads 
     // This is the all products end point https://fakestoreapi.com/products
@@ -26,13 +29,32 @@ function Homepage() {
             })
             .catch(err => console.log(err))
 
+            // Make API call to get all categories 
+            axios.get(`https://fakestoreapi.com/products/categories`)
+            .then(res => {
+                console.log(res.data)
+                // I have the categories data, what do I do with it ?
+                // I want to store this data in state
+                setCategories(['All', ...res.data])
+
+            })
+            .catch(err => console.log(err))
+
+
         }, [] // Runs only one time when the page loaded
     )
 
   return (
     <div className='homepage-container'>
-        <div className='categories'> {/* Categories will be hear */}
-            <button>All</button>
+        <div className='categories'> 
+            {/* Categories will be hear */
+                // categories.map(item => <p key={item.id}>{item.data}</p>)
+                categories.map(cat => {
+                    return <button className='categories-btn'  key={cat.index}>{cat}</button>
+                })
+        
+            }
+            
         </div>
         <div className='products-container'>
             {/* Products will be hear */

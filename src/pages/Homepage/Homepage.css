@@ -1,11 +1,20 @@
 .homepage-container {
     min-height: 100vh;
     padding: 30px 20px;
-    background-color: var(--gray);
+    background-color: var(--secondary);
 }
 
 .products-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
+}
+
+.categories-btn {
+    color: var(--primary);
+    padding: 20px;
+    border: none;
+    background-color: none;
+    font-size: 1.1rem;
+    background-color: var(--secondary);
 }

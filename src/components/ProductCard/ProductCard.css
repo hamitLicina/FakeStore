@@ -15,9 +15,6 @@
 .product-card img{
     width: 100%;
     height: 300px;
-    padding: 10px;
-    border: 1px solid var(--gray);
-    border-radius: 8px;
 }
 
 .product-card p{
@@ -27,4 +24,24 @@
     padding: 4px 4px;
     background-color: var(--white);
     color: var(--black);
+}
+
+.product-card-img-heart {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--gray);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.red-heart {
+    align-self: flex-end;
+    font-size: 2rem;
+    top: 15px;
+    right: 45px;
+    color: var(--white);
+    border: 1px solid var(--gray);
+    border-radius: 50%;
+    background-color: var(--gray);
+    padding: 5px;
 }

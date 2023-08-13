@@ -56,10 +56,6 @@ function Homepage() {
         }
     }
 
-    // All products showing by press All button
-    const showAllProducts = () => {
-        setFilteredProducts(products);
-    }
     // I want to make first letter uppercase
     const capitalizeFirstLetter = (string) => {
 
@@ -67,26 +63,25 @@ function Homepage() {
     };
 
 
+    
   return (
     <div className='homepage-container'>
         <div className='categories'> 
             {/* Categories will be hear */
                 // categories.map(item => <p key={item.id}>{item.data}</p>)
                 categories.map(cat => {
-                    return <button className='categories-btn' key={cat.name}
+                    return <button className='categories-btn' key={cat}
                     onClick={()=> handleCategoryClick(cat)}>{capitalizeFirstLetter(cat)}</button>
                 })
             }
             
         </div>
         <div className='products-container'>
-            {
-                filteredProducts.map(item => (<ProductCard product={item} key={item.id} />))
-            }
+           
             {/* Products will be hear */
                 // products.map(item => <p key={item.id}>{item.title}</p>)
 
-                products.map(item => <ProductCard product={item}
+                filteredProducts.map(item => <ProductCard product={item}
                     key={item.id}/>)
             }
         </div>

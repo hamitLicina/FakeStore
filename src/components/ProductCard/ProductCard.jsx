@@ -1,5 +1,7 @@
 import React from 'react'
 import './ProductCard.css'
+import { AiFillHeart } from 'react-icons/ai';
+// AiFillHeart
 
  // I want to make first letter uppercase
  const capitalizeFirstLetter = (string) => {
@@ -11,7 +13,11 @@ import './ProductCard.css'
 function ProductCard({product}) {
   return (
     <div className='product-card'>
+      <div className='product-card-img-heart'>
+        < AiFillHeart className='red-heart' />
         <img src={product.image} />
+      </div>
+       
         <p style={{fontWeight:'bold'}}>{product.title}</p>
         <p style={{color:'var(--gray)'}}>{capitalizeFirstLetter(product.category)}</p>
         <p style={{fontWeight:'bold'}}>{product.price}€ </p>

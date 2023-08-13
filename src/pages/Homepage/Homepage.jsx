@@ -8,6 +8,9 @@ function Homepage() {
     const [products, setProducts] = useState([])
     // Create State for the categories
     const [categories, setCategories] = useState([])
+    // Create State for the filtered categories
+    const [filteredProducts, setFilteredProducts] = useState([]);
+
 
 
     // Show all products when the page loads 
@@ -25,7 +28,7 @@ function Homepage() {
                 // I have the products data, what do I do with it ?
                 // I want to store this data in state
                 setProducts(res.data)
-
+                setFilteredProducts(res.data);
             })
             .catch(err => console.log(err))
 
@@ -44,19 +47,42 @@ function Homepage() {
         }, [] // Runs only one time when the page loaded
     )
 
+    const handleCategoryClick = (category) => {
+        if (category === 'All') {
+            setFilteredProducts(products);
+        } else {
+            const filteredProducts = products.filter(product => product.category === category);
+            setFilteredProducts(filteredProducts);
+        }
+    }
+
+    // All products showing by press All button
+    const showAllProducts = () => {
+        setFilteredProducts(products);
+    }
+    // I want to make first letter uppercase
+    const capitalizeFirstLetter = (string) => {
+
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    };
+
+
   return (
     <div className='homepage-container'>
         <div className='categories'> 
             {/* Categories will be hear */
                 // categories.map(item => <p key={item.id}>{item.data}</p>)
                 categories.map(cat => {
-                    return <button className='categories-btn'  key={cat.index}>{cat}</button>
+                    return <button className='categories-btn' key={cat.name}
+                    onClick={()=> handleCategoryClick(cat)}>{capitalizeFirstLetter(cat)}</button>
                 })
-        
             }
             
         </div>
         <div className='products-container'>
+            {
+                filteredProducts.map(item => (<ProductCard product={item} key={item.id} />))
+            }
             {/* Products will be hear */
                 // products.map(item => <p key={item.id}>{item.title}</p>)
 

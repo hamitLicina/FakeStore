@@ -17,4 +17,5 @@
     background-color: none;
     font-size: 1.1rem;
     background-color: var(--secondary);
+    cursor: pointer;
 }

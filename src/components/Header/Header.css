@@ -28,3 +28,6 @@
     border-radius: 50%;
 }
 
+.header-container > h3 > a {
+    text-decoration: none;
+}

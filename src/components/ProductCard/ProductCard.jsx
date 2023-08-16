@@ -13,10 +13,10 @@ import { AiFillHeart } from 'react-icons/ai';
 function ProductCard({product}) {
   return (
     <div className='product-card'>
-      <div className='product-card-img-heart'>
+      <a href= {`/details/${product.id}`} className='product-card-img-heart'>
         < AiFillHeart className='red-heart' />
         <img src={product.image} />
-      </div>
+      </a>
        
         <p style={{fontWeight:'bold'}}>{product.title}</p>
         <p style={{color:'var(--gray)'}}>{capitalizeFirstLetter(product.category)}</p>

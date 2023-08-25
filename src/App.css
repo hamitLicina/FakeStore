@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --primary:#3A4895;
   --secondary:#FAFAFA;
   --black: #000000;
@@ -12,4 +12,3 @@
   --gray: #D9D9D9;
   --darkgray: #979797;
 }
-

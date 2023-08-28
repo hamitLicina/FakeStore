@@ -17,19 +17,19 @@ export default function CartContextProvider(props) {
                 setCart(JSON.parse(storedFavs))
             }
             // Otherwise will use defauls state value
-        }, []
+        }, []  // When the page loads once
     )
 
     useEffect(
         () => {
             console.log('update, cart is ', cart)
-            localStorage.setItem('fake cart ', JSON.stringify(cart))
+            localStorage.setItem('fakeCart', JSON.stringify(cart))
 
         }, [cart]
     )
 
     const addProduct = (productToAdd) => {
-        console.log('adding ', productToAdd)
+        console.log('adding', productToAdd)
         let newCart = [...cart, productToAdd]
         setCart(newCart)
         // localStorage.setItem("fakeCart", JSON.stringify(newCart))

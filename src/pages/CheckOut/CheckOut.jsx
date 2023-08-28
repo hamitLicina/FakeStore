@@ -68,17 +68,15 @@ function CheckOut() {
             </div>
             {/* Checkout should clear cart? */}
     
-            <Modal
+          <Modal
               isOpen={isOpen}   
               onRequestClose={()=>setIsOpen(false)}
               style={customStyles}
-              contentLabel="Contact Us Modal"
-          >
+              contentLabel="Contact Us Modal" >
             <div className="modal-header">
               <h2>Your Order was successful!</h2>
               <h4>Check your email for the order confirmation.  Thank you for shopping with Hamit's Fake Store!</h4>
-              <button className="modal-close-btn"
-                      onClick={closeOrder}>Return to Main Page
+              <button className="modal-close-btn" onClick={closeOrder}>Return to Main Page
               </button>
             </div>
             

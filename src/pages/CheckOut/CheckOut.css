@@ -1,0 +1,29 @@
+.checkout-container button {
+    background-color: yellow;
+    border: none;
+    font-size: 1.2em;
+    width: 30%;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.checkout-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 20px;
+}
+
+.modal-close-btn {
+    background-color: blue;
+    color: white;
+    padding: 8px 16px;
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 80%;
+}

@@ -81,8 +81,7 @@ function Homepage() {
             {/* Products will be hear */
                 // products.map(item => <p key={item.id}>{item.title}</p>)
 
-                filteredProducts.map(item => <ProductCard product={item}
-                    key={item.id}/>)
+                filteredProducts.map(item => <ProductCard product={item} key={item.id}/>)
             }
         </div>
     </div>

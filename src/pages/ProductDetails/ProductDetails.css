@@ -1,9 +1,10 @@
 .details-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    padding-top: 50px;
+    justify-content: center;
+    min-height: 90vh;
+    padding-top: 20px;
     background-color: var(--secondary);
 }
 
@@ -12,21 +13,29 @@
     margin-bottom: 10px;
     background-color: var(--white);
     padding: 1rem;
-    margin-top: 20px;
+    margin: 0 20px;
+    width: 80%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-info img {
     width: 40%;
+    height: 80%;
+    padding-left: 10%;
+}
+
+.container-info {
+    width: 50%;
+    height: 80%;
     display: flex;
     flex-direction: column;
-    flex: 1;
+    align-items: flex-start;
 }
 
-.details-container img {
-    width: 40%;
-    height: auto;
-    padding-left: 10%;
-    flex: 1;
-}
-
-.container-info > button {
+.details-info > button {
     width: 50%;
     align-self: flex-start;
     padding: 10px 20px;
@@ -35,8 +44,17 @@
     font-size: 1.1rem;
     font-weight: bold;
     border: none;
+    cursor: pointer;
 }
 
-.container-info > p {
-    margin-bottom: 20px;
+
+.details-info h4, .details-info p {
+    padding: 10px;
+}
+
+@media (min-width: 480px) {
+    .details-container {
+        background-color: var(--secondary);
+    }
+    
 }

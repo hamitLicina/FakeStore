@@ -1,10 +1,16 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useContext} from 'react'
 import './ProductDetails.css'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
+import { CartContext } from '../../contexts/CartContext'
 
 
 function ProductDetails() {
+// I need to use global state
+// important NOTE {} not []
+const {cart, addProduct, removeProduct} = useContext(CartContext)
+
+
     // This page shows details of a specific Product
     // When the page loads
     // Which Product 
@@ -14,6 +20,7 @@ function ProductDetails() {
 
     // Create State
     const [product, setProduct] = useState("")
+    const [inCart, setInCart] = useState(false)
 
     // https://fakestoreapi.com/products/7
 
@@ -34,15 +41,32 @@ function ProductDetails() {
         }, [] // Runs once when the page loads
     )
 
+    // We must check if it is in cart 
+    useEffect(
+      () => {
+        let found = cart.find(item => item.id == productId)
+        console.log(found)
+        setInCart(found)
+      }, [cart]
+    )
+
   return (
     <div className='details-container'>
-      <img src={product.image} />
+      <Link to="/">Continue Shopping</Link>
       <div className='container-info'>
-        <p style={{fontWeight:'bold'}}> {product?.title} </p>
-        <p style={{fontWeight:'bold'}}> {product?.price} € </p>
-        <h4> Description </h4>
-        <p> {product?.description} </p>
-        <button>Add to Chart</button>
+        <img src={product.image} />
+        <div className='details-info'>
+          <p style={{fontWeight:'bold'}}> {product?.title} </p>
+          <p style={{fontWeight:'bold'}}> {product?.price} € </p>
+          <h4> Description </h4>
+          <p> {product?.description} </p>
+          {
+            inCart ?
+            <button onClick={() => removeProduct(product.id)}>Remove from Cart</button>
+            :
+            <button onClick={() => addProduct(product)}>Add to Cart</button>
+          }
+        </div>
       </div>
     </div>
   )

@@ -18,7 +18,7 @@ function Header() {
       <Link to="/"><h3 className='logo'>Hamit's Store</h3></Link>
       <Link to="/checkout" className='cart-wrapper'>
         <AiOutlineShoppingCart className='shopping-car-icon' />
-        <p className='cart-number'>{cart.lenght}</p>
+        <p className='cart-number'>{cart.length}</p>
       </Link>
     </div>
   )

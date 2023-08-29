@@ -30,15 +30,13 @@ export default function CartProvider(props) {
 
     const addProduct = (productToAdd) => {
         // console.log('adding', productToAdd)
-        let prevCart  = [...prevCart, productToAdd]
-        setCart(prevCart)
+        setCart((prevCart) => [...prevCart, productToAdd])
         // localStorage.setItem("fakeCart", JSON.stringify(prevCart ))
     }
 
     const removeProduct = (productId) => {
         // console.log("remove", productId)
-        let prevCart = prevCart.filter(item => item.id !== productId)
-        setCart(prevCart)
+        setCart((prevCart) => prevCart.filter(item => item.id !== productId))
         // localStorage.setItem("fakeCart", JSON.stringify(prevCart ))
     }
 

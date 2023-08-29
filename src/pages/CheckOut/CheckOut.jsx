@@ -55,7 +55,6 @@ function CheckOut() {
     
       return (
         <div className="checkout-container">
-            <h2>Item   Price   Quantity   Remove</h2>
             <div className="items-container">
             {
                 cart.map(item => <CartItem product={item}/>)

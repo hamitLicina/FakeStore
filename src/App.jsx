@@ -5,7 +5,7 @@ import Header from './components/Header/Header'
 import Homepage from './pages/Homepage/Homepage'
 import Footer from './components/Footer/Footer'
 import ProductDetails from './pages/ProductDetails/ProductDetails'
-import CartContextProvider from './contexts/CartContext'
+import CartProvider from './contexts/CartContext'
 import CheckOut from './pages/CheckOut/CheckOut'
 
 
@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <CartContextProvider>
+      <CartProvider>
 
         <Header />
 
@@ -28,7 +28,7 @@ function App() {
 
         <Footer />
       
-      </CartContextProvider>
+      </CartProvider>
       </BrowserRouter>
     </>
   )

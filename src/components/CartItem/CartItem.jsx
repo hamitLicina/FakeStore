@@ -4,7 +4,7 @@ import { CartContext } from '../../contexts/CartContext'
 import { FiTrash2 } from "react-icons/fi";
 //FiTrash2
 
-function CartItem(product) {
+function CartItem({product}) {
     // Use Global State
     // NOTE {} NOT []
     const {cart, addProduct, removeProduct} = useContext(CartContext)

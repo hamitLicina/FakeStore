@@ -2,7 +2,7 @@ import React, { useState, createContext, useEffect} from 'react'
 
 export const CartContext = createContext();
 
-export default function CartContextProvider(props) {
+export default function CartProvider(props) {
     // I need to create global state
     const [cart, setCart] = useState([])
 
@@ -10,11 +10,11 @@ export default function CartContextProvider(props) {
     useEffect(
         () => {
             // Is there a value in LocalStorage
-            const storedFavs = localStorage.getItem('fakeCart')
+            const storedCart = localStorage.getItem('fakeCart')
             // Check if somethings was there
-            if (storedFavs) {
+            if (storedCart) {
                 // Parse converts from string to its datatype
-                setCart(JSON.parse(storedFavs))
+                setCart(JSON.parse(storedCart))
             }
             // Otherwise will use defauls state value
         }, []  // When the page loads once
@@ -25,27 +25,27 @@ export default function CartContextProvider(props) {
             console.log('update, cart is ', cart)
             localStorage.setItem('fakeCart', JSON.stringify(cart))
 
-        }, [cart]
+        }, [cart]  // Store the actual cart data
     )
 
     const addProduct = (productToAdd) => {
-        console.log('adding', productToAdd)
-        let newCart = [...cart, productToAdd]
-        setCart(newCart)
-        // localStorage.setItem("fakeCart", JSON.stringify(newCart))
+        // console.log('adding', productToAdd)
+        let prevCart  = [...prevCart, productToAdd]
+        setCart(prevCart)
+        // localStorage.setItem("fakeCart", JSON.stringify(prevCart ))
     }
 
     const removeProduct = (productId) => {
-        console.log("remove", productId)
-        let newCart = cart.filter(item => item.id != productId)
-        setCart(newCart)
-        // localStorage.setItem("fakeCart", JSON.stringify(newCart))
+        // console.log("remove", productId)
+        let prevCart = prevCart.filter(item => item.id !== productId)
+        setCart(prevCart)
+        // localStorage.setItem("fakeCart", JSON.stringify(prevCart ))
     }
 
     return(
-        <CartContextProvider value={{cart, addProduct, removeProduct, setCart}}>
+        <CartContext.Provider value={{cart, addProduct, removeProduct, setCart}}>
             {props.children}
-        </CartContextProvider>
+        </CartContext.Provider>
     )
     
 }

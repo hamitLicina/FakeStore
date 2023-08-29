@@ -30,7 +30,7 @@ function Footer() {
 
   return (
     <div className='footer-container'>
-        <p>Made with <AiTwotoneHeart className='heart-icon' /> by mimo</p>
+        <p>Made with <AiTwotoneHeart className='heart-icon' /> by Hamit Licina</p>
         <button className='contact-btn' onClick={() => setIsOpen(true)}>Contact Us</button>
         <Modal
         isOpen={isOpen}

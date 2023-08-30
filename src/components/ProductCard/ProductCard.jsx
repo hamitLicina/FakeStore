@@ -28,18 +28,23 @@ function ProductCard({product}) {
 
   return (
     <div className='product-card'>
+      
+      <Link to= {`/details/${product?.id}`} className='card-container'>
+        <img src={product?.image} />
+        <h3>{product?.title}</h3>
+        <p>{capitalizeFirstLetter(product?.category)}</p> 
+        <h3>{product?.price}€ </h3>
+      </Link>
+
+      <div className='heart-container'>
       {
         inCart ?
         <FaHeart onClick={() => removeProduct(product.id)} className="heart-blue" />
         :
         <FaRegHeart onClick={() => addProduct(product)} />
       }
-      <Link to= {`/details/${product?.id}`} className='product-card'>
-        <img src={product?.image} />
-      </Link>       
-        <p style={{fontWeight:'bold'}}>{product?.title}</p>
-        <p style={{color:'var(--gray)'}}>{capitalizeFirstLetter(product?.category)}</p>
-        <p style={{fontWeight:'bold'}}>{product?.price}€ </p>
+      </div>
+      
     </div>
   )
 }

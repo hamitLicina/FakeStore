@@ -19,3 +19,8 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+body {
+  font-family: Inter, sans-serif;
+  color: var(--primary);
+}

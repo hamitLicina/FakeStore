@@ -16,10 +16,12 @@ function Header() {
   return (
     <div className='header-container'>
       <Link to="/"><h3 className='logo'>Hamit's Store</h3></Link>
-      <Link to="/checkout" className='cart-wrapper'>
-        <AiOutlineShoppingCart className='shopping-car-icon' />
-        <p className='cart-number'>{cart.length}</p>
+      <div className='cart-wrapper'>
+        <Link to="/checkout">
+          <AiOutlineShoppingCart className='shopping-car-icon' />
+          <p className='cart-number'>{cart.length}</p>
       </Link>
+      </div>      
     </div>
   )
 }

@@ -16,7 +16,7 @@ export default function CartProvider(props) {
                 // Parse converts from string to its datatype
                 setCart(JSON.parse(storedCart))
             }
-            // Otherwise will use defauls state value
+            // Otherwise will use defaults state value
         }, []  // When the page loads once
     )
 

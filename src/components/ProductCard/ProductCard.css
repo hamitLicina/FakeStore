@@ -13,9 +13,11 @@
 }
 
 .product-card img {
-    width: 80%;
+    max-width: 100%;
     height: auto;
     border: 1px solid var(--gray);
+    border-radius: 8px;
+    padding: 5px;
 }
 
 .product-card p {

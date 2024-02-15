@@ -1,5 +1,5 @@
 // rfce
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 import "./Header.css"
 import { AiOutlineShoppingCart } from "react-icons/ai";
 //AiOutlineShoppingCart
@@ -8,10 +8,10 @@ import { CartContext } from '../../contexts/CartContext';
 
 
 function Header() {
-  
+
   //use global state
   //NOTE {} not []
-  const {cart, addProduct, removeProduct} = useContext(CartContext)
+  const { cart, addProduct, removeProduct } = useContext(CartContext)
 
   return (
     <div className='header-container'>
@@ -20,8 +20,8 @@ function Header() {
         <Link to="/checkout">
           <AiOutlineShoppingCart className='shopping-car-icon' />
           <p className='cart-number'>{cart.length}</p>
-      </Link>
-      </div>      
+        </Link>
+      </div>
     </div>
   )
 }

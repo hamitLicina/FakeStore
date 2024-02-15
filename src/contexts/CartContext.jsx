@@ -1,4 +1,4 @@
-import React, { useState, createContext, useEffect} from 'react'
+import React, { useState, createContext, useEffect } from 'react'
 
 export const CartContext = createContext();
 
@@ -40,10 +40,10 @@ export default function CartProvider(props) {
         // localStorage.setItem("fakeCart", JSON.stringify(prevCart ))
     }
 
-    return(
-        <CartContext.Provider value={{cart, addProduct, removeProduct, setCart}}>
+    return (
+        <CartContext.Provider value={{ cart, addProduct, removeProduct, setCart }}>
             {props.children}
         </CartContext.Provider>
     )
-    
+
 }

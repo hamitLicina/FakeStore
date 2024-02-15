@@ -10,25 +10,25 @@ import CheckOut from './pages/CheckOut/CheckOut'
 
 
 function App() {
-  
+
 
   return (
     <>
       <BrowserRouter>
-      <CartProvider>
+        <CartProvider>
 
-        <Header />
+          <Header />
 
-        <Routes>
-          <Route path='/' element={<Homepage />} />
-          <Route path="/checkout" element={<CheckOut />} />
-          <Route path='/details/:productId' element={<ProductDetails />} />
-        
-        </Routes>
+          <Routes>
+            <Route path='/' element={<Homepage />} />
+            <Route path="/checkout" element={<CheckOut />} />
+            <Route path='/details/:productId' element={<ProductDetails />} />
 
-        <Footer />
-      
-      </CartProvider>
+          </Routes>
+
+          <Footer />
+
+        </CartProvider>
       </BrowserRouter>
     </>
   )

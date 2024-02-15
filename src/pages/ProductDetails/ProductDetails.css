@@ -35,7 +35,7 @@
     align-items: flex-start;
 }
 
-.details-info > button {
+.details-info>button {
     width: 50%;
     align-self: flex-start;
     padding: 10px 20px;
@@ -48,7 +48,8 @@
 }
 
 
-.details-info h4, .details-info p {
+.details-info h4,
+.details-info p {
     padding: 10px;
 }
 
@@ -56,5 +57,5 @@
     .details-container {
         background-color: var(--secondary);
     }
-    
+
 }

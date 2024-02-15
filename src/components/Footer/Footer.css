@@ -19,8 +19,9 @@ form label {
     display: block;
     margin-bottom: 10px;
 }
-  
-form input, form textarea { 
+
+form input,
+form textarea {
     width: 100%;
     padding: 10px;
     border: none;
@@ -29,12 +30,13 @@ form input, form textarea {
     margin-bottom: 20px;
     font-size: 16px;
 }
-  
-form input:focus, form textarea:focus {
+
+form input:focus,
+form textarea:focus {
     outline: none;
     box-shadow: 0 0 10px rgba(102, 92, 171, 0.3);
 }
-  
+
 form button[type='submit'] {
     background-color: var(--primary);
     color: var(--white);
@@ -45,22 +47,22 @@ form button[type='submit'] {
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
-  
+
 form button[type='submit']:hover {
     /* background-color: var(--primary-bg); */
     background-color: red;
 }
-  
+
 .modal-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-  
+
 .modal-header h2 {
     margin: 0;
 }
-  
+
 .modal-close-btn {
     background: var(--white);
     border: none;
@@ -69,9 +71,8 @@ form button[type='submit']:hover {
     color: gray;
     transition: color 2s ease-in-out;
 }
-  
+
 .modal-close-btn:hover {
     /* color: var(--primary-bg); */
     color: red;
 }
-

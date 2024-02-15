@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import './Homepage.css'
 import axios from 'axios'
 import ProductCard from '../../components/ProductCard/ProductCard'
@@ -23,25 +23,25 @@ function Homepage() {
             console.log('homepage loaded')
             // Make API call to get all products 
             axios.get(`https://fakestoreapi.com/products`)
-            .then(res => {
-                console.log(res.data)
-                // I have the products data, what do I do with it ?
-                // I want to store this data in state
-                setProducts(res.data)
-                setFilteredProducts(res.data);
-            })
-            .catch(err => console.log(err))
+                .then(res => {
+                    console.log(res.data)
+                    // I have the products data, what do I do with it ?
+                    // I want to store this data in state
+                    setProducts(res.data)
+                    setFilteredProducts(res.data);
+                })
+                .catch(err => console.log(err))
 
             // Make API call to get all categories 
             axios.get(`https://fakestoreapi.com/products/categories`)
-            .then(res => {
-                console.log(res.data)
-                // I have the categories data, what do I do with it ?
-                // I want to store this data in state
-                setCategories(['All', ...res.data])
+                .then(res => {
+                    console.log(res.data)
+                    // I have the categories data, what do I do with it ?
+                    // I want to store this data in state
+                    setCategories(['All', ...res.data])
 
-            })
-            .catch(err => console.log(err))
+                })
+                .catch(err => console.log(err))
 
 
         }, [] // Runs only one time when the page loaded
@@ -63,29 +63,29 @@ function Homepage() {
     };
 
 
-    
-  return (
-    <div className='homepage-container'>
-        <div className='categories'> 
-            {/* Categories will be hear */
-                // categories.map(item => <p key={item.id}>{item.data}</p>)
-                categories.map(cat => {
-                    return <button className='categories-btn' key={cat}
-                    onClick={()=> handleCategoryClick(cat)}>{capitalizeFirstLetter(cat)}</button>
-                })
-            }
-            
-        </div>
-        <div className='products-container'>
-           
-            {/* Products will be hear */
-                // products.map(item => <p key={item.id}>{item.title}</p>)
 
-                filteredProducts.map(item => <ProductCard product={item} key={item.id}/>)
-            }
+    return (
+        <div className='homepage-container'>
+            <div className='categories'>
+                {/* Categories will be hear */
+                    // categories.map(item => <p key={item.id}>{item.data}</p>)
+                    categories.map(cat => {
+                        return <button className='categories-btn' key={cat}
+                            onClick={() => handleCategoryClick(cat)}>{capitalizeFirstLetter(cat)}</button>
+                    })
+                }
+
+            </div>
+            <div className='products-container'>
+
+                {/* Products will be hear */
+                    // products.map(item => <p key={item.id}>{item.title}</p>)
+
+                    filteredProducts.map(item => <ProductCard product={item} key={item.id} />)
+                }
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Homepage

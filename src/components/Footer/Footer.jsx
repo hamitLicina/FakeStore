@@ -30,9 +30,9 @@ function Footer() {
 
   return (
     <div className='footer-container'>
-        <p>Made with <AiTwotoneHeart className='heart-icon' /> by Hamit Licina</p>
-        <button className='contact-btn' onClick={() => setIsOpen(true)}>Contact Us</button>
-        <Modal
+      <p>Made with <AiTwotoneHeart className='heart-icon' /> by Hamit Licina</p>
+      <button className='contact-btn' onClick={() => setIsOpen(true)}>Contact Us</button>
+      <Modal
         isOpen={isOpen}
         onRequestClose={() => setIsOpen(false)}
         style={customStyles}
@@ -42,14 +42,14 @@ function Footer() {
           <h2>Contact Us</h2>
           <button className='modal-close-btn' onClick={() => setIsOpen(false)}>X</button>
         </div>
-        
+
         <form>
           <label htmlFor='name'></label>
           <input type='text' id='name' placeholder='First Name' />
           <label htmlFor='surname'></label>
-          <input type='text' id='surname'  placeholder='Last Name' />
+          <input type='text' id='surname' placeholder='Last Name' />
           <label htmlFor='message' ></label>
-          <textarea id='message' rows='5'  placeholder='Write Your Message Here'></textarea>
+          <textarea id='message' rows='5' placeholder='Write Your Message Here'></textarea>
           <button type='submit'>Submit</button>
         </form>
       </Modal>

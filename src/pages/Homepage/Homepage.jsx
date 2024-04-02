@@ -3,6 +3,8 @@ import './Homepage.css'
 import axios from 'axios'
 import ProductCard from '../../components/ProductCard/ProductCard'
 
+
+
 function Homepage() {
     // Create State for the products
     const [products, setProducts] = useState([])

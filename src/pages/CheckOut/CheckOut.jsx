@@ -6,6 +6,7 @@ import Modal from 'react-modal'
 import { useNavigate } from 'react-router-dom'
 
 
+
 function CheckOut() {
   let navigate = useNavigate()
 

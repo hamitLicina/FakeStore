@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../../contexts/CartContext';
 
 
+
 function Header() {
 
   //use global state

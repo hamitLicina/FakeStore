@@ -5,6 +5,7 @@ import axios from 'axios'
 import { CartContext } from '../../contexts/CartContext'
 
 
+
 function ProductDetails() {
   // I need to use global state
   // important NOTE {} not []

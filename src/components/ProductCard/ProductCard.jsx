@@ -5,6 +5,7 @@ import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { CartContext } from '../../contexts/CartContext';
 
 
+
 // I want to make first letter uppercase
 const capitalizeFirstLetter = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);

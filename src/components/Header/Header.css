@@ -33,3 +33,10 @@
   color: var(--white);
   text-shadow: 10px;
 }
+
+.hamitLicinaLogo {
+  font-size: 1rem;
+  border-radius: 50%;
+  width: 40px; /* Adjust the width as needed */
+  height: auto; /* Maintain the aspect ratio */
+}

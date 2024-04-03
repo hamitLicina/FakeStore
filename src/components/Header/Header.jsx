@@ -5,6 +5,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 //AiOutlineShoppingCart
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../contexts/CartContext';
+import logo from '../../assets/hamitLicinaLogo.jpg'
 
 
 
@@ -16,7 +17,7 @@ function Header() {
 
   return (
     <div className='header-container'>
-      <Link to="/"><h3 className='logo'>Hamit's Store</h3></Link>
+      <Link to="/"><h3 className='logo'>Hamit's Store <img src={logo} className='hamitLicinaLogo' alt="Hamit Licina's Logo" /></h3></Link>
       <div className='cart-wrapper'>
         <Link to="/checkout">
           <AiOutlineShoppingCart className='shopping-car-icon' />

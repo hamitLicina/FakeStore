@@ -51,7 +51,7 @@ a {
 }
 
 .heart-blue {
-  color: blue;
+  color: var(--primary);
 }
 
 .heart-container {

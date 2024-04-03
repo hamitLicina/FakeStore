@@ -7,9 +7,10 @@
 }
 
 :root {
-  --primary: #8aacff;
-  --secondary: #626fe6;
-  --black: #6d42c7;
+  --primary: #c00000;
+  --secondary: #f7b32d;
+  --third: #de3c3c;
+  --black: #de3c3c;
   --white: #ffffff;
   --gray: #d9d9d9;
   --darkgray: #979797;

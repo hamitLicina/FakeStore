@@ -53,7 +53,7 @@ function ProductDetails() {
 
   return (
     <div className='details-container'>
-      <Link to="/">Continue Shopping</Link>
+      <Link to="/" className='continue'>Continue Shopping</Link>
       <div className='container-info'>
         <img src={product.image} />
         <div className='details-info'>

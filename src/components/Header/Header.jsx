@@ -5,7 +5,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 //AiOutlineShoppingCart
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../contexts/CartContext';
-import logo from '../../assets/hamitLicinaLogo.jpg'
+import logo from '../../assets/hamitlicina.jpeg'
 import { GiChainedHeart } from "react-icons/gi";
 //<GiChainedHeart />
 

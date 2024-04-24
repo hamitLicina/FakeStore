@@ -20,7 +20,7 @@
 
 .cart-number {
   border-radius: 50%;
-  background-color: red;
+  background-color: var(--secondary);
   color: var(--white);
   position: absolute;
   top: 1px;

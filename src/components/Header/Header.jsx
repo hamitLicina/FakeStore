@@ -21,8 +21,12 @@ function Header() {
     <div className='header-container'>
       <Link to="/"><h3 className='logo'>Hamit's Store <img src={logo} className='hamitLicinaLogo' alt="Hamit Licina's Logo" /></h3></Link>
       <div className='cart-wrapper'>
-        <Link to="/checkout">
+        <Link to="/liked">
           <GiChainedHeart className='likes-icon' />
+          <p className='cart-number'>{cart.length}</p>
+        </Link>
+        
+        <Link to="/checkout">
           <AiOutlineShoppingCart className='shopping-car-icon' />
           <p className='cart-number'>{cart.length}</p>
         </Link>

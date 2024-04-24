@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer'
 import ProductDetails from './pages/ProductDetails/ProductDetails'
 import CartProvider from './contexts/CartContext'
 import CheckOut from './pages/CheckOut/CheckOut'
+import Liked from './pages/Liked/Liked'
 
 
 
@@ -22,6 +23,7 @@ function App() {
 
           <Routes>
             <Route path='/' element={<Homepage />} />
+            <Route path="/liked" element={<Liked />} />
             <Route path="/checkout" element={<CheckOut />} />
             <Route path='/details/:productId' element={<ProductDetails />} />
 

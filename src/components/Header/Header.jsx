@@ -25,7 +25,7 @@ function Header() {
           <GiChainedHeart className='likes-icon' />
           <p className='cart-number'>{cart.length}</p>
         </Link>
-        
+
         <Link to="/checkout">
           <AiOutlineShoppingCart className='shopping-car-icon' />
           <p className='cart-number'>{cart.length}</p>

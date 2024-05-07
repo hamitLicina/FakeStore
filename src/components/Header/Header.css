@@ -29,6 +29,17 @@
   padding: 2px 5px;
 }
 
+.cart-number-second {
+  border-radius: 50%;
+  background-color: red;
+  color: var(--white);
+  position: absolute;
+  top: 13px;
+  right: 92px;
+  font-size: 1rem;
+  padding: 2px 5px;
+}
+
 .logo {
   color: var(--white);
   text-shadow: 10px;
@@ -47,4 +58,14 @@
   display: inline-block;
   margin-right: 20px;
   color: var(--white);
+}
+
+/* Media query to hide icons under 500px */
+@media (max-width: 500px) {
+  .likes-icon,
+  .shopping-car-icon,
+  .cart-number,
+  .cart-number-second {
+    display: none;
+  }
 }

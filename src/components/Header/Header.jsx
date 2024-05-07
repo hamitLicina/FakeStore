@@ -23,7 +23,7 @@ function Header() {
       <div className='cart-wrapper'>
         <Link to="/liked">
           <GiChainedHeart className='likes-icon' />
-          <p className='cart-number'>{cart.length}</p>
+          <p className='cart-number-second'>{cart.length}</p>
         </Link>
 
         <Link to="/checkout">
